@@ -9,6 +9,7 @@ import { styled } from "styled-components";
 import { DoughnutChart } from "./components/DoughnutChart";
 import { RadarChart } from "./components/RadarChart";
 import { AreaChart } from "./components/AreaChart";
+import { PolarChart } from "./components/PolarChart";
 import { StackedBarChart } from "./components/StackedBarChart";
 import { ThemeToggle } from "./components/ThemeToggle";
 
@@ -54,11 +55,11 @@ function App() {
           <ThemeToggle toggleTheme={toggleTheme} />
         </Banner>
         <DashboardGrid
-          div1={<StackedBarChart />}
-          div2={<LineChart />}
-          div3={<RadarChart />}
-          div4={<DoughnutChart />}
-          div5={<AreaChart />}
+          div1={<LineChart />}
+          div2={<StackedBarChart />}
+          div3={<DoughnutChart />}
+          div4={<RadarChart />}
+          div5={<PolarChart />}
           div6={<BarChart />}
         />
       </ThemeProvider>

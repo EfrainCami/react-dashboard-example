@@ -6,6 +6,7 @@ import {
   LinearScale,
   PointElement,
   Tooltip,
+  Title,
 } from "chart.js";
 
 ChartJS.register(
@@ -13,7 +14,8 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  Tooltip
+  Tooltip,
+  Title
 );
 
 const LineChart = () => {
@@ -24,7 +26,7 @@ const LineChart = () => {
         label: "Sales",
         data: [5, 10, 30, 28, 64, 60, 100],
         borderColor: "rgba(75,192,192,1)",
-        backgroundColor: "rgb(255, 255, 255)",
+        /* backgroundColor: "rgba(75,192,192,0.2)", */
         pointBackgroundColor: "rgba(75,192,192,1)",
         pointBorderColor: "#fff",
         fill: true,
@@ -36,6 +38,10 @@ const LineChart = () => {
   const options = {
     responsive: true,
     plugins: {
+      title: {
+        display: true,
+        text: "Happiness level if you hire me",
+      },
       tooltip: {
         enabled: true, // Ensure tooltips are enabled
         callbacks: {
